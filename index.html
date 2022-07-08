@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script defer src="js/main.js"></script>
+    <title>Formulario</title>
+</head>
+<body class="container">
+
+    <H1 class="text-center">Cadastro</H1>
+
+    <!-- Cor de fundo-->
+    <div class="container  p-2"> 
+        <form id="formulario">
+            <!--Linha 1-->
+            <div class="row mb-4">
+                <div class=" col-6 ">
+                    <label class="form-label" ><strong>Nome</strong><strong class="text-danger">*</strong></label>
+                    <input type="text" class="form-control" id="nome"  placeholder="Seu nome" pattern="^[a-zA-Z\u00C0-\u00FF ]+$" title="Você deve informar um nome válido" required >
+                </div>
+                <div class="col-6">
+                    <label class="form-label"><strong>Sobrenome</strong><strong class="text-danger">*</strong></label>
+                    <input type="text" class="form-control" id="sobrenome" placeholder="Seu sobrenome" pattern="[a-zA-Z\u00C0-\u00FF ]+$" title="Você deve informar um nome válido" required>
+                </div>
+            </div>
+            <!--Linha 2-->
+            <div class="row mb-4">
+                <div class="col-4">
+                    <label for="exampleFormControlInput1" class="form-label"><strong>E-mail</strong><strong class="text-danger">*</strong></label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                </div>
+                <div class="col-3 mx-auto">
+                    <label for="exampleFormControlInput1" class="form-label"><strong>Login</strong><strong class="text-danger">*</strong></label>
+                    <input class="form-control"  type="text"  id="login" readonly>
+                </div>
+                <div class="col-3 ">
+                    <label for="inputPassword" class="form-label"><strong>Senha</strong><strong class="text-danger">*</strong></label>
+                    <input type="password" class="form-control" id="senha"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title=" Deve conter  6 ou mais caracteres, pelo menos um número e uma letra maiúscula e uma minúscula" required>
+                    
+                </div>  
+            </div> 
+
+            <!--Linha 3-->
+            <div class="row mb-2">
+                <div class="col-4">
+                    <label class="form-label"><strong>Cep</strong></label>
+                    <input type="text" id="cep" pattern=".{8,}" title="Invalido" class="form-control">
+                    <span style="font-size: 12px; ">*Apenas numeros</span>
+                </div>
+                <div class="col-3 mx-auto">
+                    <label class="form-label"><strong>Endereço</strong></label>
+                    <input type="text" id="endereco" class="form-control">
+                </div>
+                
+                <div class="col-3 ">
+                    <label class="form-label"><strong>Complemento</strong></label>
+                    <input type="text" id="complemento" class="form-control">          
+                </div>
+            </div> 
+
+            <!--Linha 4-->
+            <div class="row mb-4">
+                <div class="col-4">
+                    <label class="form-label"><strong>Bairro</strong></label>
+                    <input type="text" id="bairro" class="form-control">
+                </div>
+                <div class="col-3 mx-auto">
+                    <label class="form-label"><strong>Cidade</strong></label>
+                    <input type="text" id="cidade" class="form-control">
+                </div>
+                
+                <div class="col-3 ">
+                    <label class="form-label"><strong>Estado</strong></label>
+                    <input type="text" id="estado" class="form-control">          
+                </div>
+            </div>
+
+            <!--Linha 5-->
+            <div class="row mb-4">
+                <div class="col-4">
+                    <label  class="form-label"><strong>Perfil Github</strong><strong class="text-danger">*</strong> <img src="github_git_icon_145985.ico"style="width: 20px;class="img-fluid bg-secondary " alt="..."  > </strong></label>
+                    <input type="text" id="github" class="form-control" required>
+                </div>
+                <div class="col-3 mx-auto">
+                    <label class="form-label"><strong>Academia</strong><strong class="text-danger">*</strong></label>
+                    <select class="form-select" id="academia"aria-label="Default select example" required>
+                        <option selectd>Selecione...</option>
+                        <option value="1">.Net</option>
+                        <option value="2">Java</option>
+                      </select>
+                </div>
+                
+                <div class="col-3 ">
+                    <label class="form-label"><strong>Professor</strong><strong class="text-danger">*</strong></label>
+                    <select class="form-select" id="professor" aria-label="Default select example" required>
+                        <option selectd>Selecione...</option>
+                        <option value="1">Deivison Pasa</option>
+                        <option value="2">Alexandre Zamberlan</option>
+                        <option value="3">Ricardo Frohlich</option>
+                      </select>         
+                </div>
+            </div>
+
+            <!--Linha 6-->
+            <div class="row mb-0">
+                <div class="col-12">
+                    <div class="mb-3" > 
+                        <label for="exampleFormControlTextarea1" class="form-label"><strong>Termos Legais</strong></label>
+                        <textarea  style="resize:none;" class="form-control align-self-auto" id="exampleFormControlTextarea1" rows="8" readonly>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam impedit illo magnam non. Cumque optio, quae harum ipsa natus tenetur inventore culpa voluptates quod ipsam minus iusto eius ut.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quam assumenda commodi facilis expedita ipsum voluptas magnam consequatur vitae nemo odio esse aspernatur laudantium voluptatibus quos debitis sequi doloribus. Velit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dolorem, rerum, est maxime iusto distinctio error a nisi quibusdam odio placeat iure laudantium quidem quod corrupti natus ab asperiores aut.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci optio minima commodi, repellendus dolores vero nesciunt nostrum provident vitae tempore omnis velit possimus ipsa reprehenderit repudiandae! Aliquam doloribus maxime eos?
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae at molestias dolorem, error suscipit pariatur officia, necessitatibus ex ullam provident aspernatur magni nisi ducimus? Officia a fugit recusandae nulla ad.
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!--Linha 7-->
+            <div class="row mb-4">
+                <div class="col-auto">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="termos" required>
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Eu li  e concordo com os termos acima.<strong class="text-danger">*</strong>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-auto ms-auto">
+                    <label class="form-label"><strong>Deseja receber informações</strong></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="info">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Sim, aceito receber informações
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="info2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Não desejo receber informações
+                        </label>
+                      </div>                    
+                </div>
+            </div>
+            <div class="row mt-4 mx-auto">
+                <div class="col-12">
+                    <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                            <button type="reset" class="d-none"></button>
+                    </div>
+                </div>
+            </div>
+        </form>  
+    </div>
+
+    <section id="tabela-dados" class="bg-white p-5 mb-5 d-none">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="2">DADOS SUBMETIDOS PELO FORMULÁRIO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Nome</th>
+                    <td id="t-nome"></td>
+                </tr>
+                <tr>
+                    <th>Sobrenome</th>
+                    <td id="t-sobrenome"></td>
+                </tr>
+                <tr>
+                    <th>E-mail</th>
+                    <td id="t-email"></td>
+                </tr>
+                <tr>
+                    <th>Login</th>
+                    <td id="t-login"></td>
+                </tr>
+                <tr>
+                    <th>Senha</th>
+                    <td id="t-senha"></td>
+                </tr>
+                <tr>
+                    <th>CEP</th>
+                    <td id="t-cep"></td>
+                </tr>
+                <tr>
+                    <th>Endereço</th>
+                    <td id="t-endereco"></td>
+                </tr>
+                <tr>
+                    <th>Complemento</th>
+                    <td id="t-complemento"></td>
+                </tr>
+                <tr>
+                    <th>Bairro</th>
+                    <td id="t-bairro"></td>
+                </tr>
+                <tr>
+                    <th>Cidade</th>
+                    <td id="t-cidade"></td>
+                </tr>
+                <tr>
+                    <th>Estado</th>
+                    <td id="t-estado"></td>
+                </tr>
+                <tr>
+                    <th>GitHub</th>
+                    <td id="t-github"></td>
+                </tr>
+                <tr>
+                    <th>Academia</th>
+                    <td id="t-academia"></td>
+                </tr>
+                <tr>
+                    <th>Professor</th>
+                    <td id="t-professor"></td>
+                </tr>
+                <tr>
+                    <th>Termos legais</th>
+                    <td id="t-termos"></td>
+                </tr>
+                <tr>
+                    <th>Informativo</th>
+                    <td id="t-info"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+            
+
+</body>
+</html>
